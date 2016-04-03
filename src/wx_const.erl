@@ -67,3 +67,9 @@ gl_color_buffer_bit() ->
 
 gl_depth_buffer_bit() ->
     ?GL_DEPTH_BUFFER_BIT.
+
+gl_triangles() ->
+    ?GL_TRIANGLES.
+
+gl_quads() ->
+    ?GL_QUADS.

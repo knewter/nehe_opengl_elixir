@@ -1,20 +1,17 @@
 # NeheOpenglElixir
 
-**TODO: Add description**
+A port of [nehe_erlang](https://github.com/asceth/nehe_erlang).
 
-## Installation
+## Play
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+```sh
+iex -S mix
+```
 
-  1. Add nehe_opengl_elixir to your list of dependencies in `mix.exs`:
+```elixir
+gc = GameCore.start_link
+GameCore.load(gc, Lesson02)
+```
 
-        def deps do
-          [{:nehe_opengl_elixir, "~> 0.0.1"}]
-        end
-
-  2. Ensure nehe_opengl_elixir is started before your application:
-
-        def application do
-          [applications: [:nehe_opengl_elixir]]
-        end
-
+You can edit the `lesson02.ex` module and recompile it in the shell, and it will
+live-update, so that's cool.
