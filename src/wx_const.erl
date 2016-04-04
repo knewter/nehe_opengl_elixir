@@ -73,3 +73,24 @@ gl_triangles() ->
 
 gl_quads() ->
     ?GL_QUADS.
+
+gl_texture_2d() ->
+    ?GL_TEXTURE_2D.
+
+gl_texture_mag_filter() ->
+    ?GL_TEXTURE_MAG_FILTER.
+
+gl_texture_min_filter() ->
+    ?GL_TEXTURE_MIN_FILTER.
+
+gl_linear() ->
+    ?GL_LINEAR.
+
+gl_unsigned_byte() ->
+    ?GL_UNSIGNED_BYTE.
+
+gl_rgb() ->
+    ?GL_RGB.
+
+gl_rgba() ->
+    ?GL_RGBA.
