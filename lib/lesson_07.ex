@@ -186,6 +186,7 @@ defmodule Lesson07 do
     :gl.lightfv(:wx_const.gl_light1, :wx_const.gl_ambient, state.light_ambient)
     :gl.lightfv(:wx_const.gl_light1, :wx_const.gl_diffuse, state.light_diffuse)
     :gl.lightfv(:wx_const.gl_light1, :wx_const.gl_position, state.light_position)
+    :gl.enable(:wx_const.gl_light1)
 
     image = :wxImage.new('crate.jpg')
     texture_near = load_texture_by_image(image, :wx_const.gl_nearest, :wx_const.gl_nearest)
