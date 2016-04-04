@@ -126,7 +126,7 @@ defmodule Lesson02 do
 
     :gl.translatef(3.0, 0.0, 0.0)
     :gl.begin(:wx_const.gl_quads)
-    :gl.vertex3f(-1.0,  0.0, 0.0)
+    :gl.vertex3f(-1.0,  1.0, 0.0)
     :gl.vertex3f( 1.0,  1.0, 0.0)
     :gl.vertex3f( 1.0, -1.0, 0.0)
     :gl.vertex3f(-1.0, -1.0, 0.0)
