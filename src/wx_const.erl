@@ -127,3 +127,12 @@ gl_linear_mipmap_nearest() ->
 
 gl_light1() ->
     ?GL_LIGHT1.
+
+gl_light0() ->
+    ?GL_LIGHT0.
+
+gl_color_material() ->
+    ?GL_COLOR_MATERIAL.
+
+gl_compile() ->
+    ?GL_COMPILE.
