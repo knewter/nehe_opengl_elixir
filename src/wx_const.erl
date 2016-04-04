@@ -94,3 +94,36 @@ gl_rgb() ->
 
 gl_rgba() ->
     ?GL_RGBA.
+
+gl_lighting() ->
+    ?GL_LIGHTING.
+
+wxk_up() ->
+    ?WXK_UP.
+
+wxk_down() ->
+    ?WXK_DOWN.
+
+wxk_left() ->
+    ?WXK_LEFT.
+
+wxk_right() ->
+    ?WXK_RIGHT.
+
+gl_ambient() ->
+    ?GL_AMBIENT.
+
+gl_diffuse() ->
+    ?GL_DIFFUSE.
+
+gl_position() ->
+    ?GL_POSITION.
+
+gl_nearest() ->
+    ?GL_NEAREST.
+
+gl_linear_mipmap_nearest() ->
+    ?GL_LINEAR_MIPMAP_NEAREST.
+
+gl_light1() ->
+    ?GL_LIGHT1.
