@@ -244,7 +244,7 @@ defmodule Cubes do
   def draw_cell(row_num, {cell, cell_num}, state) do
     IO.puts "drawing cell #{row_num} #{cell_num} #{inspect cell}"
     :gl.loadIdentity()
-    :gl.translatef(1.4 + (cell_num * 2.8), ((6.0 - row_num) * 2.4) - 7.0, -40.0)
+    :gl.translatef(1.4 + (cell_num * 2.2), ((6.0 - row_num) * 2.0) - 7.0, -40.0)
     :gl.color3f(0.0, 1.0, 0.0)
     :gl.callList(state.box)
   end
