@@ -4,6 +4,7 @@ defmodule Cubes do
   Record.defrecordp :wx, Record.extract(:wx, from_lib: "wx/include/wx.hrl")
   Record.defrecordp :wxSize, Record.extract(:wxSize, from_lib: "wx/include/wx.hrl")
   Record.defrecordp :wxKey, Record.extract(:wxKey, from_lib: "wx/include/wx.hrl")
+  alias Extris.Shapes
 
   defmodule State do
     defstruct [
@@ -245,7 +246,22 @@ defmodule Cubes do
     IO.puts "drawing cell #{row_num} #{cell_num} #{inspect cell}"
     :gl.loadIdentity()
     :gl.translatef(1.4 + (cell_num * 2.2), ((6.0 - row_num) * 2.0) - 7.0, -40.0)
-    :gl.color3f(0.0, 1.0, 0.0)
+    color = brush_for(cell)
+    :erlang.apply(:gl, :color3f, color)
     :gl.callList(state.box)
   end
+
+  def brush_for(n) when is_integer(n) do
+    Shapes.by_number(n)
+    |> brush_for
+  end
+
+  def brush_for(:ell),   do: [1.0, 0.59, 0]
+  def brush_for(:jay),   do: [0.05, 0, 1.0]
+  def brush_for(:ess),   do: [0.02, 0.91, 5]
+  def brush_for(:zee),   do: [1.0, 0.067, 0.067]
+  def brush_for(:bar),   do: [0.0, 0.94, 1.0]
+  def brush_for(:oh),    do: [0.97, 1.0, 0.067]
+  def brush_for(:tee),   do: [0.39, 1.0, 0.067]
+  def brush_for(:board), do: [0.0, 0.0, 0.0]
 end
